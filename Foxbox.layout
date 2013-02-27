@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="BoomBox.cpp" open="0" top="0" tabpos="15">
+		<Cursor position="1296" topLine="30" />
+	</File>
+	<File name="BoomBox.h" open="0" top="0" tabpos="10">
+		<Cursor position="746" topLine="0" />
+	</File>
+	<File name="Box.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="18021" topLine="600" />
+	</File>
+	<File name="Box.h" open="1" top="0" tabpos="8">
+		<Cursor position="2447" topLine="10" />
+	</File>
+	<File name="BoxContactListener.cpp" open="0" top="0" tabpos="17">
+		<Cursor position="1846" topLine="35" />
+	</File>
+	<File name="BoxContactListener.h" open="0" top="0" tabpos="14">
+		<Cursor position="481" topLine="0" />
+	</File>
+	<File name="ChargeBox.cpp" open="1" top="0" tabpos="15">
+		<Cursor position="258" topLine="0" />
+	</File>
+	<File name="ChargeBox.h" open="1" top="0" tabpos="14">
+		<Cursor position="514" topLine="0" />
+	</File>
+	<File name="Events.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="11160" topLine="320" />
+	</File>
+	<File name="Events.h" open="1" top="0" tabpos="4">
+		<Cursor position="1456" topLine="67" />
+	</File>
+	<File name="FloatBox.cpp" open="0" top="0" tabpos="17">
+		<Cursor position="908" topLine="5" />
+	</File>
+	<File name="FloatBox.h" open="0" top="0" tabpos="14">
+		<Cursor position="498" topLine="5" />
+	</File>
+	<File name="FoxBox.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="278" topLine="0" />
+	</File>
+	<File name="FoxBox.h" open="1" top="0" tabpos="12">
+		<Cursor position="252" topLine="0" />
+	</File>
+	<File name="Gibs.cpp" open="1" top="0" tabpos="16">
+		<Cursor position="24" topLine="0" />
+	</File>
+	<File name="MagicBox.cpp" open="0" top="0" tabpos="16">
+		<Cursor position="1467" topLine="24" />
+	</File>
+	<File name="Minimap.cpp" open="0" top="0" tabpos="15">
+		<Cursor position="2034" topLine="45" />
+	</File>
+	<File name="Minimap.h" open="0" top="0" tabpos="14">
+		<Cursor position="955" topLine="8" />
+	</File>
+	<File name="Player.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2116" topLine="166" />
+	</File>
+	<File name="Player.h" open="1" top="0" tabpos="6">
+		<Cursor position="297" topLine="4" />
+	</File>
+	<File name="TargetArea.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="374" topLine="0" />
+	</File>
+	<File name="TargetArea.h" open="0" top="0" tabpos="11">
+		<Cursor position="348" topLine="0" />
+	</File>
+	<File name="Timer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="746" topLine="14" />
+	</File>
+	<File name="Timer.h" open="0" top="0" tabpos="0">
+		<Cursor position="378" topLine="0" />
+	</File>
+	<File name="UI.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="2263" topLine="67" />
+	</File>
+	<File name="UI.h" open="0" top="0" tabpos="2">
+		<Cursor position="755" topLine="0" />
+	</File>
+	<File name="World.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="16441" topLine="493" />
+	</File>
+	<File name="World.h" open="1" top="0" tabpos="2">
+		<Cursor position="322" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2358" topLine="61" />
+	</File>
+	<File name="utility.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="1678" topLine="24" />
+	</File>
+	<File name="utility.h" open="1" top="0" tabpos="10">
+		<Cursor position="2328" topLine="48" />
+	</File>
+</CodeBlocks_layout_file>
