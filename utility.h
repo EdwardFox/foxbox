@@ -77,6 +77,7 @@ extern bool global_scrollBordersEnabled;
 extern bool global_enableAllyAI;
 extern bool global_isPaused;
 extern bool global_levelComplete;
+extern bool global_isMenu;
 
 extern sf::Sound box_attack;
 extern sf::Sound box_attack2;

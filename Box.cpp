@@ -211,7 +211,7 @@ void Box::update(Events gameEvents)
         if(isSelected(gameEvents.lastMouse.x, gameEvents.lastMouse.y))
         {
             isInfo = true;
-            sprite.setColor(sf::Color(255, 155, 0, 255));
+            sprite.setColor(sf::Color(120, 120, 120, 255));
         }
         else
         {
@@ -227,7 +227,7 @@ void Box::update(Events gameEvents)
 
             if(isSelected(gameEvents.lastMouse.x, gameEvents.lastMouse.y))
             {
-                sprite.setColor(sf::Color(255, 155, 0, 255));
+                sprite.setColor(sf::Color(120, 120, 120, 255));
             }
             else
             {
@@ -478,8 +478,8 @@ void Box::moveToTarget(float x, float y, float radius, bool withStopCondition, f
 
 void Box::jump(float jump, float speed)
 {
-    int rndS = rand() % 400 + 800;
-    int rndH = rand() % 400 + 800;
+    int rndS = rand() % 200 + 900;
+    int rndH = rand() % 200 + 900;
 
     float rndSpeed = rndS / 1000.0f;
     float rndHeight = rndH / 1000.0f;

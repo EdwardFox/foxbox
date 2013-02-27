@@ -472,16 +472,16 @@ void World::generateWorld(b2World& physicsWorld)
 
     // ------------------------------- Ally team -------------------------------
     int startX = rand() % 200 + 400;
-    int startY = rand() % 200 + 400;
-    int amountNormalBoxes = 4;
-    int amountChargeBoxes = 2;
-    int amountMagicBoxes = 1;
+    int startY = rand() % 200 + 200;
+    int amountNormalBoxes = 5;
+    int amountChargeBoxes = 3;
+    int amountMagicBoxes = 2;
 
     // Boxes
     for(int i = 0; i < amountNormalBoxes; i++)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "box");
     }
 
@@ -489,7 +489,7 @@ void World::generateWorld(b2World& physicsWorld)
     for(int i = 0; i < amountChargeBoxes; i++)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "chargebox");
     }
 
@@ -497,7 +497,7 @@ void World::generateWorld(b2World& physicsWorld)
     for(int i = 0; i < amountMagicBoxes; i++)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "magicbox");
     }
 
@@ -505,7 +505,7 @@ void World::generateWorld(b2World& physicsWorld)
     if(rand() % 100 < 20)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "chargebox");
     }
 
@@ -519,14 +519,14 @@ void World::generateWorld(b2World& physicsWorld)
     if(rand() % 100 < 20)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "magicbox");
     }
 
     if(rand() % 100 < 20)
     {
         startX = rand() % 200 + 400;
-        startY = rand() % 200;
+        startY = rand() % 200 + 200;
         createBox(physicsWorld, startX, startY, 30.0f, 0.35f, TEAM_ALLY, "boombox");
     }
 

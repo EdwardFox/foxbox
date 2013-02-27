@@ -20,8 +20,8 @@ void Events::processEvents(sf::RenderWindow& window, sf::Event& event)
 
     while(window.pollEvent(event))
     {
-        // General Events
-        if(event.type == sf::Event::Closed || (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
+        // Close Event
+        if(event.type == sf::Event::Closed)
         {
             window.close();
         }
@@ -200,6 +200,9 @@ void Events::processEvents(sf::RenderWindow& window, sf::Event& event)
                     isNumPad4 = true;
                     isNumPad4Held = true;
                     break;
+                case sf::Keyboard::Escape :
+                    isEsc = true;
+                    break;
             }
         }
 
@@ -352,6 +355,7 @@ void Events::resetStates()
     isNumPad2 = false;
     isNumPad3 = false;
     isNumPad4 = false;
+    isEsc = false;
 }
 
 void Events::resetHeldStates()

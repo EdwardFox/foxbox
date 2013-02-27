@@ -122,6 +122,8 @@ class Events
 
         bool isNumPad4;
         bool isNumPad4Held;
+
+        bool isEsc;
     protected:
     private:
         void resetStates();

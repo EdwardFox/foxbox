@@ -12,11 +12,11 @@ UI::~UI()
 
 void UI::init()
 {
-    id_boxAmount = addText("", 0.025f, 0.05f, DEFAULT_TEXT_SIZE, sf::Color::Black);
-    id_boxChargeAmount = addText("", 0.025f, 0.1f, DEFAULT_TEXT_SIZE, sf::Color::Black);
-    id_resources = addText("", 0.025f, 0.15f, DEFAULT_TEXT_SIZE, sf::Color::Black);
-    id_ai = addText("", 0.025f, 0.2f, DEFAULT_TEXT_SIZE, sf::Color::Black);
-    id_globalMessage = addText("", 0.33f, 0.6f, 30, sf::Color::Black);
+    id_boxAmount = addText("", 0.025f, 0.05f, DEFAULT_TEXT_SIZE, sf::Color::White);
+    id_boxChargeAmount = addText("", 0.025f, 0.1f, DEFAULT_TEXT_SIZE, sf::Color::White);
+    id_resources = addText("", 0.025f, 0.15f, DEFAULT_TEXT_SIZE, sf::Color::White);
+    id_ai = addText("", 0.025f, 0.2f, DEFAULT_TEXT_SIZE, sf::Color::White);
+    id_globalMessage = addText("", 0.33f, 0.6f, 30, sf::Color::White);
 
     globalMessageTimer.setThreshold(4.0f);
     globalMessageTimer.endTimer();
@@ -84,15 +84,6 @@ void UI::draw(sf::RenderWindow& window)
                 window.draw(texts.at(i));
             }
         }
-    }
-
-    if(global_isPaused)
-    {
-        sf::Text text_pause("Paused", font_default, 100);
-        text_pause.setColor(sf::Color::White);
-        text_pause.setPosition(window_width * 0.38f, window_height * 0.43f);
-
-        window.draw(text_pause);
     }
 }
 

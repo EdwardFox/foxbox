@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1361908644 source:f:\sfml\projects\foxbox\main.cpp
+1361985977 source:f:\sfml\projects\foxbox\main.cpp
 	<SFML/Graphics.hpp>
 	<Box2D/Box2D.h>
 	<iostream>
@@ -15,6 +15,9 @@
 	"BoxContactListener.h"
 	"Minimap.h"
 	"UI.h"
+	"Menu.h"
+	"MenuImage.h"
+	"MenuButton.h"
 
 1360355152 f:\sfml\sfml-2.0-rc\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -514,10 +517,10 @@
 1360359387 f:\sfml\box2d_v2.2.0\box2d\box2d\rope\b2rope.h
 	<Box2D/Common/b2Math.h>
 
-1361906972 source:f:\sfml\projects\foxbox\utility.cpp
+1361982223 source:f:\sfml\projects\foxbox\utility.cpp
 	"utility.h"
 
-1361963626 f:\sfml\projects\foxbox\utility.h
+1361968478 f:\sfml\projects\foxbox\utility.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<Box2D/Box2D.h>
@@ -526,7 +529,7 @@
 	<sstream>
 	<map>
 
-1361901366 source:f:\sfml\projects\foxbox\box.cpp
+1361983385 source:f:\sfml\projects\foxbox\box.cpp
 	"Box.h"
 
 1361888381 f:\sfml\projects\foxbox\box.h
@@ -542,10 +545,10 @@
 	"TargetArea.h"
 	"Timer.h"
 
-1361901032 source:f:\sfml\projects\foxbox\events.cpp
+1361976381 source:f:\sfml\projects\foxbox\events.cpp
 	"Events.h"
 
-1361963683 f:\sfml\projects\foxbox\events.h
+1361976337 f:\sfml\projects\foxbox\events.h
 	<SFML/Graphics.hpp>
 	<Box2D/Box2D.h>
 	"utility.h"
@@ -572,7 +575,7 @@
 1361908804 source:f:\sfml\projects\foxbox\world.cpp
 	"World.h"
 
-1361901217 source:f:\sfml\projects\foxbox\player.cpp
+1361986031 source:f:\sfml\projects\foxbox\player.cpp
 	"Player.h"
 
 1361745897 f:\sfml\projects\foxbox\player.h
@@ -664,7 +667,7 @@
 1361578509 source:f:\sfml\projects\foxbox\fog.cpp
 	"Fog.h"
 
-1361815238 source:f:\sfml\projects\foxbox\ui.cpp
+1361978643 source:f:\sfml\projects\foxbox\ui.cpp
 	"UI.h"
 
 1361745886 f:\sfml\projects\foxbox\ui.h
@@ -749,4 +752,33 @@
 
 1361908256 source:f:\sfml\projects\foxbox\foxbox.cpp
 	"FoxBox.h"
+
+1361985315 source:f:\sfml\projects\foxbox\menu.cpp
+	"Menu.h"
+
+1361974281 f:\sfml\projects\foxbox\menu.h
+	"Events.h"
+	"utility.h"
+	"MenuElement.h"
+	"MenuImage.h"
+	"MenuButton.h"
+
+1361976739 source:f:\sfml\projects\foxbox\menuelement.cpp
+	"MenuElement.h"
+
+1361976688 f:\sfml\projects\foxbox\menuelement.h
+	"Events.h"
+	"utility.h"
+
+1361976817 source:f:\sfml\projects\foxbox\menuimage.cpp
+	"MenuImage.h"
+
+1361969133 f:\sfml\projects\foxbox\menuimage.h
+	"MenuElement.h"
+
+1361984397 source:f:\sfml\projects\foxbox\menubutton.cpp
+	"MenuButton.h"
+
+1361979240 f:\sfml\projects\foxbox\menubutton.h
+	"MenuImage.h"
 

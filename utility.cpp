@@ -13,6 +13,7 @@ bool global_scrollBordersEnabled;
 bool global_enableAllyAI;
 bool global_isPaused;
 bool global_levelComplete;
+bool global_isMenu;
 
 sf::Sound box_attack;
 sf::Sound box_attack2;
@@ -49,6 +50,16 @@ void initGlobals()
     textures["floatbox_ground"] = createTexture("resources/img/floatbox.png", true);
     textures["magicbox_ground"] = createTexture("resources/img/magicbox.png", true);
     textures["foxbox_ground"] = createTexture("resources/img/foxbox.png", true);
+
+    // Textures: Menu
+    textures["menu_logo"] = createTexture("resources/img/logo.png", true);
+    textures["menu_logo_bottom"] = createTexture("resources/img/logo_bottom.png", true);
+    textures["menu_button_resume"] = createTexture("resources/img/button_resume.png", true);
+    textures["menu_button_play"] = createTexture("resources/img/button_play.png", true);
+    textures["menu_button_instructions"] = createTexture("resources/img/button_instructions.png", true);
+    textures["menu_button_quit"] = createTexture("resources/img/button_quit.png", true);
+    textures["menu_button_controls"] = createTexture("resources/img/button_controls.png", true);
+    textures["menu_button_gameplay"] = createTexture("resources/img/button_gameplay.png", true);
 
     // Sounds
     soundBuffers["box_stomp"] = createSound("resources/sounds/box_stomp.aif");
@@ -101,6 +112,7 @@ void initGlobals()
     global_enableAllyAI = true;
     global_isPaused = false;
     global_levelComplete = false;
+    global_isMenu = true;
 }
 
 std::string getProperType(std::string type)

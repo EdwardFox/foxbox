@@ -74,71 +74,71 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
         gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(0, 0, 255, 255), false);
     }
 
-    if(gameEvents.isH)
-    {
-        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "chargebox");
-    }
+//    if(gameEvents.isH)
+//    {
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "chargebox");
+//    }
 
-    if(gameEvents.isI)
-    {
-        if(debug_global_detonateOnContact)
-        {
-            std::cout << "GLOBAL: BoomBox detonate on contact disabled." << std::endl;
-            debug_global_detonateOnContact = false;
-        }
-        else
-        {
-            std::cout << "GLOBAL: BoomBox detonate on contact enabled." << std::endl;
-            debug_global_detonateOnContact = true;
-        }
-    }
+//    if(gameEvents.isI)
+//    {
+//        if(debug_global_detonateOnContact)
+//        {
+//            std::cout << "GLOBAL: BoomBox detonate on contact disabled." << std::endl;
+//            debug_global_detonateOnContact = false;
+//        }
+//        else
+//        {
+//            std::cout << "GLOBAL: BoomBox detonate on contact enabled." << std::endl;
+//            debug_global_detonateOnContact = true;
+//        }
+//    }
 
     if(gameEvents.isJ)
     {
         gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "box");
     }
 
-    if(gameEvents.isK)
-    {
-        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "boombox");
-    }
+//    if(gameEvents.isK)
+//    {
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "boombox");
+//    }
 
-    if(gameEvents.isL)
-    {
-        int id = gameWorld.getBoxIdByCoordinates(gameEvents.lastMouse.x, gameEvents.lastMouse.y);
-        b2Vec2 pos = getGroundCoordsByCoordinates(gameEvents.lastMouse.x, gameEvents.lastMouse.y);
-        std::string groundId = getIndexByGroundCoordinates(pos.x, pos.y);
-
-        // Check if we have selected a box
-        if(id >= 0)
-        {
-            // Check if element exists in selection and delete it
-            for(unsigned int i = 0; i < selectedBoxes.size(); i++)
-            {
-                if(selectedBoxes.at(i) == id)
-                {
-                    selectedBoxes.erase(selectedBoxes.begin() + i);
-                }
-            }
-
-            // Delete box
-            //gameWorld.deleteBoxById(id);
-            gameWorld.getBoxById(id)->isDead = true;
-
-            // Rebuild selected boxes vector
-            selectedBoxes.clear();
-            selectedBoxes = gameWorld.getSelectedBoxes();
-        }
-
-        try
-        {
-            gameWorld.getGroundBoxes()->at(groundId)->isDead = true;
-        }
-        catch(std::out_of_range ex)
-        {
-            //std::cout << "No groundBox found." << std::endl;
-        }
-    }
+//    if(gameEvents.isL)
+//    {
+//        int id = gameWorld.getBoxIdByCoordinates(gameEvents.lastMouse.x, gameEvents.lastMouse.y);
+//        b2Vec2 pos = getGroundCoordsByCoordinates(gameEvents.lastMouse.x, gameEvents.lastMouse.y);
+//        std::string groundId = getIndexByGroundCoordinates(pos.x, pos.y);
+//
+//        // Check if we have selected a box
+//        if(id >= 0)
+//        {
+//            // Check if element exists in selection and delete it
+//            for(unsigned int i = 0; i < selectedBoxes.size(); i++)
+//            {
+//                if(selectedBoxes.at(i) == id)
+//                {
+//                    selectedBoxes.erase(selectedBoxes.begin() + i);
+//                }
+//            }
+//
+//            // Delete box
+//            //gameWorld.deleteBoxById(id);
+//            gameWorld.getBoxById(id)->isDead = true;
+//
+//            // Rebuild selected boxes vector
+//            selectedBoxes.clear();
+//            selectedBoxes = gameWorld.getSelectedBoxes();
+//        }
+//
+//        try
+//        {
+//            gameWorld.getGroundBoxes()->at(groundId)->isDead = true;
+//        }
+//        catch(std::out_of_range ex)
+//        {
+//            //std::cout << "No groundBox found." << std::endl;
+//        }
+//    }
 
     if(gameEvents.isO)
     {
@@ -248,61 +248,67 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
         }
     }
 
-    if(gameEvents.isNumPad1)
-    {
-        if(debug_showTargetLines)
-        {
-            std::cout << "DEBUG: Target Lines disabled." << std::endl;
-            debug_showTargetLines = false;
-        }
-        else
-        {
-            std::cout << "DEBUG: Target Lines enabled." << std::endl;
-            debug_showTargetLines = true;
-        }
-    }
+//    if(gameEvents.isNumPad1)
+//    {
+//        if(debug_showTargetLines)
+//        {
+//            std::cout << "DEBUG: Target Lines disabled." << std::endl;
+//            debug_showTargetLines = false;
+//        }
+//        else
+//        {
+//            std::cout << "DEBUG: Target Lines enabled." << std::endl;
+//            debug_showTargetLines = true;
+//        }
+//    }
+//
+//    if(gameEvents.isNumPad2)
+//    {
+//        if(debug_showTargetArea)
+//        {
+//            std::cout << "DEBUG: Target Area disabled." << std::endl;
+//            debug_showTargetArea = false;
+//        }
+//        else
+//        {
+//            std::cout << "DEBUG: Target Area enabled." << std::endl;
+//            debug_showTargetArea = true;
+//        }
+//    }
+//
+//    if(gameEvents.isNumPad3)
+//    {
+//        if(debug_showStaticHealth)
+//        {
+//            std::cout << "DEBUG: Static Box Health hidden." << std::endl;
+//            debug_showStaticHealth = false;
+//        }
+//        else
+//        {
+//            std::cout << "DEBUG: Static Box Health shown." << std::endl;
+//            std::cout << "WARNING: Crash upon exit once health was shown. Known SFML bug." << std::endl;
+//            debug_showStaticHealth = true;
+//        }
+//    }
+//
+//    if(gameEvents.isNumPad4)
+//    {
+//        if(debug_showInactiveGroundBoxes)
+//        {
+//            std::cout << "DEBUG: Inactive Ground Boxes hidden." << std::endl;
+//            debug_showInactiveGroundBoxes = false;
+//        }
+//        else
+//        {
+//            std::cout << "DEBUG: Inactive Ground Boxes shown." << std::endl;
+//            debug_showInactiveGroundBoxes = true;
+//        }
+//    }
 
-    if(gameEvents.isNumPad2)
+    if(gameEvents.isEsc)
     {
-        if(debug_showTargetArea)
-        {
-            std::cout << "DEBUG: Target Area disabled." << std::endl;
-            debug_showTargetArea = false;
-        }
-        else
-        {
-            std::cout << "DEBUG: Target Area enabled." << std::endl;
-            debug_showTargetArea = true;
-        }
-    }
-
-    if(gameEvents.isNumPad3)
-    {
-        if(debug_showStaticHealth)
-        {
-            std::cout << "DEBUG: Static Box Health hidden." << std::endl;
-            debug_showStaticHealth = false;
-        }
-        else
-        {
-            std::cout << "DEBUG: Static Box Health shown." << std::endl;
-            std::cout << "WARNING: Crash upon exit once health was shown. Known SFML bug." << std::endl;
-            debug_showStaticHealth = true;
-        }
-    }
-
-    if(gameEvents.isNumPad4)
-    {
-        if(debug_showInactiveGroundBoxes)
-        {
-            std::cout << "DEBUG: Inactive Ground Boxes hidden." << std::endl;
-            debug_showInactiveGroundBoxes = false;
-        }
-        else
-        {
-            std::cout << "DEBUG: Inactive Ground Boxes shown." << std::endl;
-            debug_showInactiveGroundBoxes = true;
-        }
+        global_isMenu = true;
+        global_isPaused = true;
     }
 
     // ------------------------------- Mouse -------------------------------
@@ -312,7 +318,15 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 
         if(id >= 0 && gameWorld.getBoxById(id)->team == TEAM_ALLY)
         {
-            selectedBoxes.push_back(id);
+            if(std::find(selectedBoxes.begin(), selectedBoxes.end(), id) != selectedBoxes.end())
+            {
+                selectedBoxes.erase(std::remove(selectedBoxes.begin(), selectedBoxes.end(), id), selectedBoxes.end());
+            }
+            else
+            {
+                selectedBoxes.push_back(id);
+            }
+
             gameWorld.toggleBoxSelect(id);
         }
     }
