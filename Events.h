@@ -19,10 +19,12 @@ class Events
         b2Vec2 lastMouseLeft;
         bool mouseLeftClicked;
         bool mouseLeftHeld;
+        short unsigned int mouseLeftLayer;
 
         b2Vec2 lastMouseRight;
         bool mouseRightClicked;
         bool mouseRightHeld;
+        short unsigned int mouseRightLayer;
 
         // Keyboard
         bool isA;

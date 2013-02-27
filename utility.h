@@ -107,6 +107,14 @@ enum boxCategory
     BOX_GIB     = 0x0004,
 };
 
+enum eventLayers
+{
+    LAYER_NONE  = 0,
+    LAYER_MENU  = 1,
+    LAYER_GAME  = 2,
+    LAYER_HUD   = 3,
+};
+
 // Function definitions
 sf::Texture createTexture(std::string path, bool smooth);
 sf::SoundBuffer createSound(std::string path);

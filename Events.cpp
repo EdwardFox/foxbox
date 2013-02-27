@@ -357,7 +357,9 @@ void Events::resetStates()
 void Events::resetHeldStates()
 {
     mouseLeftHeld = false;
+    mouseLeftLayer = LAYER_NONE;
     mouseRightHeld = false;
+    mouseRightLayer = LAYER_NONE;
 
     isAHeld = false;
     isDHeld = false;
