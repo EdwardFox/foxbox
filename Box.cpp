@@ -553,6 +553,7 @@ void Box::attack()
     if(isAttacking)
     {
         attackTimer.resetTimer();
+        aiTarget = NULL;
 
         // If we are stuck with another box
         if(stickyMaster != NULL)

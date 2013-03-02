@@ -24,6 +24,10 @@ class MenuButton : public MenuImage
         sf::Color backgroundColor;
         sf::Color backgroundBorderColor;
 
+        float clickTime;
+        float clickDelay;
+        bool isClicked;
+
     private:
 };
 

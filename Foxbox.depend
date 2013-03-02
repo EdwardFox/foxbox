@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1361985977 source:f:\sfml\projects\foxbox\main.cpp
+1362182433 source:f:\sfml\projects\foxbox\main.cpp
 	<SFML/Graphics.hpp>
 	<Box2D/Box2D.h>
 	<iostream>
@@ -517,10 +517,10 @@
 1360359387 f:\sfml\box2d_v2.2.0\box2d\box2d\rope\b2rope.h
 	<Box2D/Common/b2Math.h>
 
-1361982223 source:f:\sfml\projects\foxbox\utility.cpp
+1362182675 source:f:\sfml\projects\foxbox\utility.cpp
 	"utility.h"
 
-1361968478 f:\sfml\projects\foxbox\utility.h
+1362182589 f:\sfml\projects\foxbox\utility.h
 	<SFML/Graphics.hpp>
 	<SFML/Audio.hpp>
 	<Box2D/Box2D.h>
@@ -529,7 +529,7 @@
 	<sstream>
 	<map>
 
-1361983385 source:f:\sfml\projects\foxbox\box.cpp
+1362173996 source:f:\sfml\projects\foxbox\box.cpp
 	"Box.h"
 
 1361888381 f:\sfml\projects\foxbox\box.h
@@ -572,13 +572,13 @@
 	"Timer.h"
 	"Gibs.h"
 
-1361908804 source:f:\sfml\projects\foxbox\world.cpp
+1362164658 source:f:\sfml\projects\foxbox\world.cpp
 	"World.h"
 
-1361986031 source:f:\sfml\projects\foxbox\player.cpp
+1362181239 source:f:\sfml\projects\foxbox\player.cpp
 	"Player.h"
 
-1361745897 f:\sfml\projects\foxbox\player.h
+1362175974 f:\sfml\projects\foxbox\player.h
 	<SFML/Graphics.hpp>
 	<Box2D/Box2D.h>
 	<iostream>
@@ -591,6 +591,7 @@
 	"Events.h"
 	"World.h"
 	"TargetArea.h"
+	"MouseTargetMarker.h"
 
 1360775926 f:\sfml\projects\foxbox\targetarea.h
 	<SFML/Graphics.hpp>
@@ -776,9 +777,15 @@
 1361969133 f:\sfml\projects\foxbox\menuimage.h
 	"MenuElement.h"
 
-1361984397 source:f:\sfml\projects\foxbox\menubutton.cpp
+1362182650 source:f:\sfml\projects\foxbox\menubutton.cpp
 	"MenuButton.h"
 
-1361979240 f:\sfml\projects\foxbox\menubutton.h
+1362182809 f:\sfml\projects\foxbox\menubutton.h
 	"MenuImage.h"
+
+1362175617 f:\sfml\projects\foxbox\mousetargetmarker.h
+	"utility.h"
+
+1362181245 source:f:\sfml\projects\foxbox\mousetargetmarker.cpp
+	"MouseTargetMarker.h"
 

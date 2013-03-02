@@ -364,10 +364,20 @@ void resume()
 
 void play()
 {
-    gameWorld.generateWorld(physicsWorld);
-    global_isPaused = false;
-    global_isMenu = false;
-    menu_button_resume->isDrawn = true;
+    if(!menu_button_resume->isDrawn)
+    {
+        gameWorld.generateWorld(physicsWorld);
+        global_isPaused = false;
+        global_isMenu = false;
+        menu_button_resume->isDrawn = true;
+    }
+    else
+    {
+        gameWorld.regenerateWorld(physicsWorld);
+        global_isPaused = false;
+        global_isMenu = false;
+    }
+
 }
 
 void instructions()

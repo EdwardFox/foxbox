@@ -19,6 +19,7 @@ sf::Sound box_attack;
 sf::Sound box_attack2;
 sf::Sound box_dead;
 sf::Sound box_contact;
+sf::Sound menu_click;
 sf::Music music;
 
 // Debug
@@ -66,6 +67,7 @@ void initGlobals()
     soundBuffers["box_stomp2"] = createSound("resources/sounds/box_stomp_02.wav");
     soundBuffers["box_dead"] = createSound("resources/sounds/box_dead.wav");
     soundBuffers["box_contact"] = createSound("resources/sounds/box_contact.wav");
+    soundBuffers["menu_click"] = createSound("resources/sounds/menu_click.wav");
 
     box_attack.setBuffer(soundBuffers["box_stomp"]);
     box_attack.setVolume(25.0f);
@@ -83,6 +85,9 @@ void initGlobals()
     box_contact.setBuffer(soundBuffers["box_contact"]);
     box_contact.setVolume(45.0f);
     box_contact.setAttenuation(100.0f);
+
+    menu_click.setBuffer(soundBuffers["menu_click"]);
+    menu_click.setVolume(50.0f);
 
     // Music
     musicStrings.push_back("resources/music/Boom_Kitty-The_Floor.ogg");

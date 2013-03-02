@@ -368,6 +368,8 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
             float targetAreaSize = BOX_SIZE/4.0f + selectedBoxes.size() * 2.0f;
 
             gameWorld.setBunchTargetArea(selectedBoxes, TargetArea(gameEvents.lastMouseRight.x, gameEvents.lastMouseRight.y, targetAreaSize));
+
+            mTargetMarker.createCircle(gameEvents.lastMouseRight.x, gameEvents.lastMouseRight.y, 0.2f, 50.0f, sf::Color(250, 250, 250, 255));
         }
     }
 
@@ -444,7 +446,7 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
         transformCost = 0;
     }
 
-
+    mTargetMarker.update();
 }
 
 void Player::clearActiveBoxes(World& gameWorld)
@@ -474,6 +476,8 @@ void Player::draw(sf::RenderWindow& window)
     {
         window.draw(resourceConsumption);
     }
+
+    mTargetMarker.draw(window);
 }
 
 void Player::setBoxTransformVisuals(Events gameEvents)

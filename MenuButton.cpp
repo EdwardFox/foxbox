@@ -3,11 +3,15 @@
 MenuButton::MenuButton()
 {
     isBackgroundEnabled = false;
+    clickDelay = 0.1f * FRAMES_PER_SECOND;
+    isClicked = false;
 }
 
 MenuButton::MenuButton(int x, int y, int width, int height, sf::Texture& texture) : MenuImage(x, y, width, height, texture)
 {
     isBackgroundEnabled = false;
+    clickDelay = 0.1f * FRAMES_PER_SECOND;
+    isClicked = false;
 }
 
 MenuButton::~MenuButton()
@@ -23,6 +27,14 @@ void MenuButton::update(Events& gameEvents)
     {
         sprite.setColor(sf::Color(100, 100, 100, 255));
 
+        if(clickTime >= clickDelay && !isClicked && isDrawn)
+        {
+            menu_click.play();
+            clickTime = 0.0f;
+            isClicked = true;
+        }
+
+
         if(gameEvents.mouseLeftClicked)
         {
             callbackFunc();
@@ -31,7 +43,10 @@ void MenuButton::update(Events& gameEvents)
     else
     {
         sprite.setColor(sf::Color(255, 255, 255, 255));
+        isClicked = false;
     }
+
+    clickTime++;
 }
 
 void MenuButton::draw(sf::RenderWindow& window)

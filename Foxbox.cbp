@@ -5,6 +5,7 @@
 		<Option title="Foxbox" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Menu\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin\Debug\Foxbox" prefix_auto="1" extension_auto="1" />
@@ -68,6 +69,30 @@
 		<Unit filename="Gibs.h" />
 		<Unit filename="MagicBox.cpp" />
 		<Unit filename="MagicBox.h" />
+		<Unit filename="Menu.cpp">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="Menu.h">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuButton.cpp">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuButton.h">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuElement.cpp">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuElement.h">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuImage.cpp">
+			<Option virtualFolder="Menu\" />
+		</Unit>
+		<Unit filename="MenuImage.h">
+			<Option virtualFolder="Menu\" />
+		</Unit>
 		<Unit filename="Minimap.cpp" />
 		<Unit filename="Minimap.h" />
 		<Unit filename="Player.cpp" />

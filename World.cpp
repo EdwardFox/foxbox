@@ -534,7 +534,7 @@ void World::generateWorld(b2World& physicsWorld)
     int eStartX = rand() % (int)(MAX_WORLD_WIDTH * BOX_SIZE - 1500) + 1500;
     int eStartY = rand() % 200;
 
-    for(int i = 0; i < 60; i++)
+    for(int i = 0; i < 50; i++)
     {
         createBox(physicsWorld, eStartX, eStartY, 30.0f, 0.35f, TEAM_ENEMY, getRandomBoxType(true));
         //createBox(physicsWorld, eStartX, eStartY, 30.0f, 0.35f, TEAM_ENEMY, "floatbox");
@@ -552,6 +552,7 @@ void World::regenerateWorld(b2World& physicsWorld)
     for(unsigned int i = 0; i < boxes.size(); i++)
     {
         boxes.at(i)->getBody()->GetWorld()->DestroyBody(boxes.at(i)->getBody());
+        delete boxes.at(i);
     }
 
     boxes.clear();
@@ -560,6 +561,7 @@ void World::regenerateWorld(b2World& physicsWorld)
     for(std::map<std::string, Box*>::iterator it = groundBoxes.begin(); it != groundBoxes.end(); ++it)
     {
         it->second->getBody()->GetWorld()->DestroyBody(it->second->getBody());
+        delete it->second;
     }
 
     groundBoxes.clear();
@@ -818,6 +820,7 @@ void World::update(Events gameEvents, b2World& world, Player& player)
 
     if(global_levelComplete)
     {
+        player.addResources(-player.getResources());
         regenerateWorld(world);
     }
 }
@@ -921,18 +924,21 @@ Box* World::getBoxById(int id)
 void World::deleteBoxById(int id)
 {
     boxes.at(id)->getBody()->GetWorld()->DestroyBody(boxes.at(id)->getBody());
+    delete boxes.at(id);
     boxes.erase(boxes.begin() + id);
 }
 
 void World::deleteGibById(int id)
 {
     gibs.at(id)->getBody()->GetWorld()->DestroyBody(gibs.at(id)->getBody());
+    delete gibs.at(id);
     gibs.erase(gibs.begin() + id);
 }
 
 void World::deleteGroundBoxById(std::string id)
 {
     groundBoxes.at(id)->getBody()->GetWorld()->DestroyBody(groundBoxes.at(id)->getBody());
+    delete groundBoxes.at(id);
     groundBoxes.erase(id);
 }
 

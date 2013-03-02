@@ -24,7 +24,7 @@ const float GIB_SIZE = 8.0f;
 const int GIB_AMOUNT = 4;
 
 const int MAX_WORLD_HEIGHT = 40;
-const int MAX_WORLD_WIDTH = 250;
+const int MAX_WORLD_WIDTH = 200;
 const int MAX_SKY_HEIGHT = 5000;
 const int GROUND_STARTING_HEIGHT = 352;
 const float IMPULSE_DAMAGE_MULTIPLIER = 0.03;
@@ -83,6 +83,7 @@ extern sf::Sound box_attack;
 extern sf::Sound box_attack2;
 extern sf::Sound box_dead;
 extern sf::Sound box_contact;
+extern sf::Sound menu_click;
 extern sf::Music music;
 
 // Debug

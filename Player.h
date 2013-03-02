@@ -14,6 +14,7 @@
 #include "Events.h"
 #include "World.h"
 #include "TargetArea.h"
+#include "MouseTargetMarker.h"
 
 // Forward declaration to prevent circular header dependencies
 class World;
@@ -63,6 +64,8 @@ class Player
         int resourceAmount;
 
         b2Vec2 newFocus;
+
+        MouseTargetMarker mTargetMarker;
 };
 
 #endif // PLAYER_H
