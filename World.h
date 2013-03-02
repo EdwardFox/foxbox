@@ -69,6 +69,9 @@ class World
         int getChargedBox();
 
         bool groundBoxExists(std::string id);
+
+        Timer completionTimer;
+        bool completionStarted;
     protected:
     private:
         std::map<std::string, Box*> groundBoxes;

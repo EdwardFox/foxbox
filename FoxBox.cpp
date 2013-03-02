@@ -27,6 +27,7 @@ void FoxBox::ai()
         if(contactDynamicList.at(i)->team == TEAM_ALLY && contactDynamicList.at(i)->type != "floatbox")
         {
             global_levelComplete = true;
+            isDead = true;
         }
     }
 }

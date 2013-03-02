@@ -84,6 +84,7 @@ extern sf::Sound box_attack2;
 extern sf::Sound box_dead;
 extern sf::Sound box_contact;
 extern sf::Sound menu_click;
+extern sf::Sound fireworks;
 extern sf::Music music;
 
 // Debug

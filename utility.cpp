@@ -20,6 +20,7 @@ sf::Sound box_attack2;
 sf::Sound box_dead;
 sf::Sound box_contact;
 sf::Sound menu_click;
+sf::Sound fireworks;
 sf::Music music;
 
 // Debug
@@ -68,6 +69,7 @@ void initGlobals()
     soundBuffers["box_dead"] = createSound("resources/sounds/box_dead.wav");
     soundBuffers["box_contact"] = createSound("resources/sounds/box_contact.wav");
     soundBuffers["menu_click"] = createSound("resources/sounds/menu_click.wav");
+    soundBuffers["fireworks"] = createSound("resources/sounds/finale_fireworks.wav");
 
     box_attack.setBuffer(soundBuffers["box_stomp"]);
     box_attack.setVolume(25.0f);
@@ -87,7 +89,10 @@ void initGlobals()
     box_contact.setAttenuation(100.0f);
 
     menu_click.setBuffer(soundBuffers["menu_click"]);
-    menu_click.setVolume(50.0f);
+    menu_click.setVolume(45.0f);
+
+    fireworks.setBuffer(soundBuffers["fireworks"]);
+    fireworks.setVolume(45.0f);
 
     // Music
     musicStrings.push_back("resources/music/Boom_Kitty-The_Floor.ogg");

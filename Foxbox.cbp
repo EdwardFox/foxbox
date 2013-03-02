@@ -95,6 +95,8 @@
 		</Unit>
 		<Unit filename="Minimap.cpp" />
 		<Unit filename="Minimap.h" />
+		<Unit filename="MouseTargetMarker.cpp" />
+		<Unit filename="MouseTargetMarker.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
 		<Unit filename="TargetArea.cpp" />

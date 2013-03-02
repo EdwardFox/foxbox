@@ -62,12 +62,17 @@ void ChargeBox::ai()
 
 void ChargeBox::attack()
 {
+//    if(isAttacking && hasActiveTargetArea)
+//    {
+//        isAttacking = false;
+//    }
+
     if(isAttacking && hasActiveTargetArea)
     {
-        isAttacking = false;
+        hasActiveTargetArea = false;
     }
 
-    if(attackReady && isAttacking && !attackStarted && !hasActiveTargetArea && (contactStaticList.size() > 0 || contactDynamicList.size() > 0))
+    if(attackReady && isAttacking && !attackStarted /*&& !hasActiveTargetArea*/)
     {
         if(isConverted && team == TEAM_NEUTRAL)
         {
@@ -107,7 +112,7 @@ void ChargeBox::attack()
         }
 
         // Stop condition
-        if((contactStaticList.size() > 0 && rechargeTimer.timeReached()) || (contactDynamicList.size() > 0 && rechargeTimer.timeReached()))
+        if(rechargeTimer.timeReached())
         {
             attackStarted = false;
             isAttacking = false;

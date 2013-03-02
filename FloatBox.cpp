@@ -244,7 +244,6 @@ void FloatBox::ai()
                                 // Returned to random horizontal position
                                 if(body->GetPosition().x * SCALE >= returnPos.x)
                                 {
-                                    std::cout << "target freed" << std::endl;
                                     aiTarget->floatMaster = NULL;
                                     aiTarget = NULL;
                                     hasGainedAltitude = false;

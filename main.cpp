@@ -73,7 +73,7 @@ int main()
     window.setSize(sf::Vector2u(window_width, window_height));
     window.setPosition(sf::Vector2i(200, 200));
     window.setFramerateLimit(FRAMES_PER_SECOND);
-    window.setVerticalSyncEnabled(true);
+    //window.setVerticalSyncEnabled(true);
     window.setKeyRepeatEnabled(false);
 
     // Camera view
@@ -120,7 +120,7 @@ int main()
         // Update normal view with inputs
         windowView = updateView(windowView);
 
-        if(global_levelComplete)
+        if(gameWorld.completionStarted && gameWorld.completionTimer.timeReached())
         {
             windowView.setCenter(window_width/2, window_height/2);
             global_levelComplete = false;
@@ -207,6 +207,19 @@ int main()
             // HUD !!CLASS!!
             ui.setSize(window_width, window_height);
             window.setView(ui.getView());
+
+            if(!gameWorld.completionTimer.timeReached() && gameWorld.completionStarted)
+            {
+                sf::Text temp("You have won", font_default, 40);
+
+                int midX = window_width / 2.0f - 100;
+                int midY = window_height / 2.0f - 40;
+
+                temp.setPosition(midX, midY);
+                temp.setColor(sf::Color::White);
+
+                window.draw(temp);
+            }
 
             if(global_isPaused)
             {

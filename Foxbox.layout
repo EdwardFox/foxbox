@@ -7,10 +7,10 @@
 	<File name="BoomBox.h" open="0" top="0" tabpos="10">
 		<Cursor position="746" topLine="0" />
 	</File>
-	<File name="Box.cpp" open="1" top="0" tabpos="12">
-		<Cursor position="14058" topLine="452" />
+	<File name="Box.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="15724" topLine="533" />
 	</File>
-	<File name="Box.h" open="1" top="0" tabpos="11">
+	<File name="Box.h" open="1" top="0" tabpos="6">
 		<Cursor position="2447" topLine="10" />
 	</File>
 	<File name="BoxContactListener.cpp" open="0" top="0" tabpos="17">
@@ -25,10 +25,10 @@
 	<File name="ChargeBox.h" open="0" top="0" tabpos="14">
 		<Cursor position="514" topLine="0" />
 	</File>
-	<File name="Events.cpp" open="1" top="0" tabpos="8">
+	<File name="Events.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="6838" topLine="173" />
 	</File>
-	<File name="Events.h" open="1" top="0" tabpos="7">
+	<File name="Events.h" open="1" top="0" tabpos="2">
 		<Cursor position="2194" topLine="87" />
 	</File>
 	<File name="FloatBox.cpp" open="0" top="0" tabpos="17">
@@ -49,14 +49,14 @@
 	<File name="MagicBox.cpp" open="0" top="0" tabpos="16">
 		<Cursor position="1467" topLine="24" />
 	</File>
-	<File name="Menu.h" open="1" top="0" tabpos="2">
+	<File name="Menu.h" open="0" top="0" tabpos="2">
 		<Cursor position="150" topLine="0" />
 	</File>
-	<File name="MenuButton.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="1070" topLine="30" />
+	<File name="MenuButton.cpp" open="1" top="1" tabpos="15">
+		<Cursor position="527" topLine="0" />
 	</File>
-	<File name="MenuButton.h" open="1" top="0" tabpos="3">
-		<Cursor position="441" topLine="0" />
+	<File name="MenuButton.h" open="1" top="0" tabpos="14">
+		<Cursor position="740" topLine="0" />
 	</File>
 	<File name="MenuElement.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="77" topLine="0" />
@@ -64,10 +64,10 @@
 	<File name="MenuElement.h" open="0" top="0" tabpos="0">
 		<Cursor position="394" topLine="0" />
 	</File>
-	<File name="MenuImage.cpp" open="1" top="0" tabpos="6">
+	<File name="MenuImage.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="470" topLine="0" />
 	</File>
-	<File name="MenuImage.h" open="1" top="0" tabpos="5">
+	<File name="MenuImage.h" open="0" top="0" tabpos="5">
 		<Cursor position="224" topLine="0" />
 	</File>
 	<File name="Minimap.cpp" open="0" top="0" tabpos="15">
@@ -76,11 +76,11 @@
 	<File name="Minimap.h" open="0" top="0" tabpos="14">
 		<Cursor position="955" topLine="8" />
 	</File>
-	<File name="Player.cpp" open="1" top="1" tabpos="10">
-		<Cursor position="4418" topLine="99" />
+	<File name="Player.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="10757" topLine="350" />
 	</File>
-	<File name="Player.h" open="1" top="0" tabpos="9">
-		<Cursor position="297" topLine="4" />
+	<File name="Player.h" open="1" top="0" tabpos="4">
+		<Cursor position="1682" topLine="26" />
 	</File>
 	<File name="TargetArea.cpp" open="0" top="0" tabpos="12">
 		<Cursor position="374" topLine="0" />
@@ -94,25 +94,25 @@
 	<File name="Timer.h" open="0" top="0" tabpos="0">
 		<Cursor position="378" topLine="0" />
 	</File>
-	<File name="UI.cpp" open="1" top="0" tabpos="16">
+	<File name="UI.cpp" open="1" top="0" tabpos="11">
 		<Cursor position="2163" topLine="67" />
 	</File>
 	<File name="UI.h" open="0" top="0" tabpos="2">
 		<Cursor position="806" topLine="0" />
 	</File>
-	<File name="World.cpp" open="1" top="0" tabpos="15">
-		<Cursor position="18093" topLine="542" />
+	<File name="World.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="26599" topLine="801" />
 	</File>
 	<File name="World.h" open="0" top="0" tabpos="2">
 		<Cursor position="322" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="12661" topLine="386" />
+		<Cursor position="12256" topLine="347" />
 	</File>
-	<File name="utility.cpp" open="1" top="0" tabpos="14">
-		<Cursor position="2469" topLine="25" />
+	<File name="utility.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="3512" topLine="61" />
 	</File>
-	<File name="utility.h" open="1" top="0" tabpos="13">
-		<Cursor position="2289" topLine="45" />
+	<File name="utility.h" open="1" top="0" tabpos="8">
+		<Cursor position="2534" topLine="57" />
 	</File>
 </CodeBlocks_layout_file>

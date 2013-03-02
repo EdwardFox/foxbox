@@ -67,12 +67,12 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 //        gameWorld.stopAllActions();
 //    }
 
-    if(gameEvents.isG || gameEvents.isGHeld)
-    {
-        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(255, 0, 0, 255), false);
-        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(0, 255, 0, 255), false);
-        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(0, 0, 255, 255), false);
-    }
+//    if(gameEvents.isG || gameEvents.isGHeld)
+//    {
+//        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(255, 0, 0, 255), false);
+//        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(0, 255, 0, 255), false);
+//        gameWorld.createGib(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, sf::Color(0, 0, 255, 255), false);
+//    }
 
 //    if(gameEvents.isH)
 //    {
@@ -93,10 +93,10 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 //        }
 //    }
 
-    if(gameEvents.isJ)
-    {
-        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "box");
-    }
+//    if(gameEvents.isJ)
+//    {
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "box");
+//    }
 
 //    if(gameEvents.isK)
 //    {
@@ -139,11 +139,11 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 //            //std::cout << "No groundBox found." << std::endl;
 //        }
 //    }
-
-    if(gameEvents.isO)
-    {
-        gameWorld.regenerateWorld(physicsWorld);
-    }
+//
+//    if(gameEvents.isO)
+//    {
+//        gameWorld.regenerateWorld(physicsWorld);
+//    }
 
     if(gameEvents.isP)
     {

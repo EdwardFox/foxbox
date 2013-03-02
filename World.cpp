@@ -3,6 +3,9 @@
 World::World()
 {
     resourceTimer.setThreshold(10.0f);
+    completionTimer.setThreshold(10.0f);
+    completionTimer.endTimer();
+    completionStarted = false;
 }
 
 World::~World()
@@ -474,7 +477,7 @@ void World::generateWorld(b2World& physicsWorld)
     int startX = rand() % 200 + 400;
     int startY = rand() % 200 + 200;
     int amountNormalBoxes = 5;
-    int amountChargeBoxes = 3;
+    int amountChargeBoxes = 1;
     int amountMagicBoxes = 2;
 
     // Boxes
@@ -820,9 +823,37 @@ void World::update(Events gameEvents, b2World& world, Player& player)
 
     if(global_levelComplete)
     {
+        completionTimer.resetTimer();
+        completionStarted = true;
+        global_levelComplete = false;
+    }
+
+    if(!completionTimer.timeReached() && completionStarted)
+    {
+
+        if(completionTimer.getCurrentTime() - (int)completionTimer.getCurrentTime() == 0.5f)
+        {
+            int posX = MAX_WORLD_WIDTH * BOX_SIZE - (rand() % 1000 - 500);
+            int posY = 0 + (rand() % 200 - 100);
+
+            //fireworks.play();
+
+            for(int i = 0; i < rand() % 50 + 50; i++)
+            {
+                createGibBunch(world, 1, posX, posY, sf::Color(rand() % 255 + 1, rand() % 255 + 1, rand() % 255 + 1, 255), false);
+            }
+
+
+        }
+    }
+    else if(completionTimer.timeReached() && completionStarted)
+    {
         player.addResources(-player.getResources());
         regenerateWorld(world);
+        completionStarted = false;
     }
+
+    completionTimer.update();
 }
 
 void World::draw(sf::RenderWindow& window, b2Vec2 winTopLeft, b2Vec2 winBottomRight, bool isMinimap)
