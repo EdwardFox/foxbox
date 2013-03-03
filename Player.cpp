@@ -102,7 +102,7 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 //    {
 //        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "boombox");
 //    }
-
+//
 //    if(gameEvents.isL)
 //    {
 //        int id = gameWorld.getBoxIdByCoordinates(gameEvents.lastMouse.x, gameEvents.lastMouse.y);
@@ -175,7 +175,7 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
         {
             for(unsigned int i = 0; i < selectedBoxes.size(); i++)
             {
-                if(!gameWorld.getBoxById(selectedBoxes.at(i))->repeatAttack)
+                if(!gameWorld.getBoxById(selectedBoxes.at(i))->repeatAttack && gameWorld.getBoxById(selectedBoxes.at(i))->type == "box")
                 {
                     gameWorld.getBoxById(selectedBoxes.at(i))->isAttacking = true;
                     gameWorld.getBoxById(selectedBoxes.at(i))->repeatAttack = true;
@@ -250,65 +250,29 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
 
 //    if(gameEvents.isNumPad1)
 //    {
-//        if(debug_showTargetLines)
-//        {
-//            std::cout << "DEBUG: Target Lines disabled." << std::endl;
-//            debug_showTargetLines = false;
-//        }
-//        else
-//        {
-//            std::cout << "DEBUG: Target Lines enabled." << std::endl;
-//            debug_showTargetLines = true;
-//        }
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "chargebox");
 //    }
 //
 //    if(gameEvents.isNumPad2)
 //    {
-//        if(debug_showTargetArea)
-//        {
-//            std::cout << "DEBUG: Target Area disabled." << std::endl;
-//            debug_showTargetArea = false;
-//        }
-//        else
-//        {
-//            std::cout << "DEBUG: Target Area enabled." << std::endl;
-//            debug_showTargetArea = true;
-//        }
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "magicbox");
 //    }
 //
 //    if(gameEvents.isNumPad3)
 //    {
-//        if(debug_showStaticHealth)
-//        {
-//            std::cout << "DEBUG: Static Box Health hidden." << std::endl;
-//            debug_showStaticHealth = false;
-//        }
-//        else
-//        {
-//            std::cout << "DEBUG: Static Box Health shown." << std::endl;
-//            std::cout << "WARNING: Crash upon exit once health was shown. Known SFML bug." << std::endl;
-//            debug_showStaticHealth = true;
-//        }
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "boombox");
 //    }
 //
 //    if(gameEvents.isNumPad4)
 //    {
-//        if(debug_showInactiveGroundBoxes)
-//        {
-//            std::cout << "DEBUG: Inactive Ground Boxes hidden." << std::endl;
-//            debug_showInactiveGroundBoxes = false;
-//        }
-//        else
-//        {
-//            std::cout << "DEBUG: Inactive Ground Boxes shown." << std::endl;
-//            debug_showInactiveGroundBoxes = true;
-//        }
+//        gameWorld.createBox(physicsWorld, gameEvents.lastMouse.x, gameEvents.lastMouse.y, 30.0f, 0.35f, 1, "floatbox");
 //    }
 
     if(gameEvents.isEsc)
     {
         global_isMenu = true;
         global_isPaused = true;
+        music.pause();
     }
 
     // ------------------------------- Mouse -------------------------------
@@ -386,7 +350,7 @@ void Player::update(b2World &physicsWorld, Events gameEvents, World &gameWorld)
                 {
                     pushBox = gameWorld.getBoxById(id);
 
-                    if(pushBox->type == "floatbox")
+                    if(pushBox->type == "floatbox" || pushBox->type == "foxbox")
                     {
                         pushBox = NULL;
                     }

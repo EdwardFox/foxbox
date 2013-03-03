@@ -18,6 +18,7 @@ void Menu::update(Events& gameEvents)
         {
             global_isPaused = false;
             global_isMenu = false;
+            music.play();
         }
     }
 

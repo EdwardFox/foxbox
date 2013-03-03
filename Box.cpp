@@ -558,7 +558,7 @@ void Box::attack()
         // If we are stuck with another box
         if(stickyMaster != NULL)
         {
-            // If the other box is not from our team, we cannot attack
+            // If the other box is not from our team, we cannot
             if(stickyMaster->team != team)
             {
                 return;

@@ -373,6 +373,7 @@ void resume()
 {
     global_isPaused = false;
     global_isMenu = false;
+    music.play();
 }
 
 void play()
@@ -389,6 +390,7 @@ void play()
         gameWorld.regenerateWorld(physicsWorld);
         global_isPaused = false;
         global_isMenu = false;
+        music.play();
     }
 
 }
@@ -430,7 +432,7 @@ void showInstructions()
 }
 void showControls()
 {
-    sf::Text controls("Left Click on Box: Select\n                  on World: Deselect all boxes\nLeft Dragged: Selection area\n\nRight Click with Selection: Move Command\nRight Held without Selection:\n   on Static Box: Convert to team\n   on Dynamic Box: Push\n\nWASD - Move Camera\nSpace - Attack / Utility\nQ - Show all info\nE - Select all\nR - Autoattack (Normal Boxes only)\nT - Get Box with Charge\n1 - Select Normal Boxes\n2 - Select Magic Boxes\n3 - Select Charge Boxes\n4 - Select all Float Boxes", font_default, 16);
+    sf::Text controls("Left Click on Box: Select\n                  on World: Deselect all boxes\nLeft Drag: Selection area\n\nRight Click with Selection: Move Command\nRight Held without Selection:\n   on Ground Box: Convert to team\n   on Dynamic Box: Push\n\nWASD - Move Camera\nSpace - Attack / Utility\nQ - Show all info\nE - Select all\nR - Autoattack (Normal Boxes only)\nT - Get Box with Charge\n1 - Select all Normal Boxes\n2 - Select all Magic Boxes\n3 - Select all Charge Boxes\n4 - Select all Float Boxes", font_default, 16);
     controls.setPosition(460, 132);
     controls.setColor(sf::Color::White);
 
@@ -444,7 +446,7 @@ void showControls()
 
 void showGameplay()
 {
-    sf::Text gameplay("The goal of the game is too reach and touch the orange FoxBox, which will grant your boxes access to the next\n world. Reaching the FoxBox will be no easy task, as it is protected by a huge amount of red Boxes.\n\nTo accomplish this goal, you must help the green Boxes get past their enemies. The Boxes are equipped with a\nbasic AI to move, fight and harvest static boxes. But they have no idea where to go, so you need to guide them.\n\nDifferent Boxes possess different attacks and attributes. Normal Boxes can stomp the ground and enemies.\nCharge Boxes can charge a long way in any direction, dealing huge damage to dynamic boxes.\nFloat Boxes ignore gravity and can drag away other boxes by activating their sticky function. They can also act as\nstatic boxes, so other boxes can use them for advanced movement. Boom Boxes explode in a random radius,\ndealing damage and knocking boxes away. Magic Boxes turn static boxes into dynamic ones, heal allies, turn\nenemies to neutrals, and neutrals to allies. Static Boxes in the world that lose all direct connections\n(up/down/left/right) will become dynamic. Most Boxes also have tag charges, which will be used to turn dynamic\nneutral boxes to your team. The neutral box needs to be touched. The charge is then consumed.\n\nYou can directly influence static and dynamic boxes by right clicking and holding the mouse button. Static Boxes\ncan be turned to allies, and dynamic boxes can be pushed away. But these actions cost resources, which are\ngained by destroying static boxes and enemies. Destroying special Boxes grants more resources. You will also\ngain some resources every few seconds, depending on the amount of boxes you command.", font_default, 16);
+    sf::Text gameplay("The goal of the game is too reach and touch the orange FoxBox, which will grant your boxes access to the next\n world. Reaching the FoxBox will be no easy task, as it is protected by a huge amount of red Boxes.\n\nTo accomplish this goal, you must help the green Boxes get past their enemies. The Boxes are equipped with a\nbasic AI to move and fight. But they have no idea where to go, so you need to guide them.\n\nDifferent Boxes possess different attacks and attributes. Normal Boxes can stomp the ground and enemies.\nCharge Boxes can charge a long way in any direction, dealing huge damage to enemies.\nFloat Boxes ignore gravity and can drag away other boxes by activating their sticky function. They can also act as\nsground boxes, so other boxes can use them for advanced movement. Boom Boxes explode in a random radius,\ndealing damage and knocking boxes away. Magic Boxes turn ground boxes into dynamic ones, heal allies, turn\nenemies to neutrals, and neutrals to allies. Ground Boxes in the world that lose all direct connections\n(up/down/left/right) will become dynamic. Most Boxes also have tag charges, which will be used to turn dynamic\nneutral boxes to your team. The neutral box needs to be touched. The charge is then consumed.\n\nYou can directly influence ground and dynamic boxes by right clicking and holding the mouse button. Ground Boxes\ncan be turned to allies, and dynamic boxes can be pushed away. But these actions cost resources, which are\ngained by destroying ground boxes and enemies. Destroying special Boxes grants more resources. You will also\ngain some resources every few seconds, depending on the amount of boxes you command.", font_default, 16);
     gameplay.setPosition(460, 132);
     gameplay.setColor(sf::Color::White);
 
